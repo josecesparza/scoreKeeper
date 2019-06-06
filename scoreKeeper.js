@@ -57,10 +57,11 @@ function resetGame() {
 };
 
 inputMaxScore.addEventListener("change", function(){
-    displayMax.textContent = inputMaxScore.value;
-    winningScore = Number(inputMaxScore.value);
+    displayMax.textContent = this.value;
+    winningScore = Number(this.value);
     resetGame();
 });
+
 //We are just allowing the backspace, enter and number keys of our keyboard.
 inputMaxScore.onkeydown = function(e) {
     if(!((e.keyCode > 95 && e.keyCode < 106)
